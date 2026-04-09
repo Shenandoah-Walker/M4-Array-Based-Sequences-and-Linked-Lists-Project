@@ -52,3 +52,8 @@ class InfixConverter:
                             break
                     #The current operator has lower precedence than the operator at the top of the stack, so push the current operator onto the stack
                     self.stack.push(character) 
+
+            while not self.stack.is_empty():
+                    converted_postfix_expression.append(self.stack.pop())
+
+            return " ".join(converted_postfix_expression)

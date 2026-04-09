@@ -35,7 +35,7 @@ infix = ["A + B",
          "( A + B * C ) / ( D - E )",
          "A + ( B - C ) * D",
          "( A + B * ( C - D ) ) / E"]
-
+print()
 print("----- Infix to Postfix Converter -----")
 infix_converter = InfixConverter()
 for expression in infix:
