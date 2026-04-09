@@ -22,7 +22,7 @@ class PostfixEvaluator:
                 right_number = self.stack.pop()  
                 left_number = self.stack.pop()
 
-                #Determine which 
+                #Determine which operator the character is. If it is +, -, *, or /, apply the operator to the two operands and push the result back onto the stack. If it is not one of these operators, raise a ValueError stating that "The following operator is not basic arithmetic and therefore cannot be evaluated: {character}"
                 if character == '+':
                     self.stack.push(left_number + right_number)
 
