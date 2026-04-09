@@ -33,7 +33,7 @@ class InfixConverter:
 
                 #In any other case, the character is an operator, so pop all operators from the stack that have higher or equal precedence and append them to the list, then push the current operator onto the stack
                 else:
-                    #While the stack is not empty and the precedence of the operator at the top of the stack is greater than or equal to the precedence of the current operator, pop the operator from the stack and append it to the list
+                    #While the stack is not empty and the precedence of the operator at the top of the stack is not a left parenthesis, pop the operator from the stack and append it to the list
                     while (not self.stack.is_empty() and self.stack.peek() != '('):
                         character_at_top_of_stack = self.stack.peek()
                         #if the operator at the top of the stack has higher precedence than the current operator, pop it from the stack and append it to the list
