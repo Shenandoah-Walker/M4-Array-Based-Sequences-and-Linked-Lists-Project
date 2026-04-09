@@ -38,3 +38,18 @@ print("Delete the last node: Head ->", " -> ".join(str(x) for x in my_list2), "-
 #Delete the interior node
 my_list2.remove(30)
 print("Delete the interior node: Head ->", " -> ".join(str(x) for x in my_list2), "-> None")
+
+#Remove all test
+print()
+print("---- Remove all test ----")
+my_list3 = SinglyLinkedList()
+my_list3.build_forward_list([1, 2, 4, 6, 1, 3, 6])
+print("Head ->", " -> ".join(str(x) for x in my_list3), "-> None")
+
+#Remove all the occurrences of 1 in the list. (There should be 2)
+my_list3.remove_all(1)
+print("Removing 1 and all duplicates: Head ->", " -> ".join(str(x) for x in my_list3), "-> None")
+
+#Remove all the occurrences of 6 in the list. (There should be 2)
+my_list3.remove_all(6)
+print("Removing 6 and all duplicates: Head ->", " -> ".join(str(x) for x in my_list3), "-> None")
