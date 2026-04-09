@@ -28,7 +28,8 @@ class InfixConverter:
                 elif character == ')':
                     while (not self.stack.is_empty() and self.stack.peek() != '('):
                         converted_postfix_expression.append(self.stack.pop())
-                    self.stack.pop()  # Pop the left parenthesis from the stack
+                    #Pop the left parenthesis from the stack
+                    self.stack.pop()  
 
                 #In any other case, the character is an operator, so pop all operators from the stack that have higher or equal precedence and append them to the list, then push the current operator onto the stack
                 else:
