@@ -23,3 +23,21 @@ postfix_evaluator = PostfixEvaluator()
 for expression in postfix:
     expression_evaluated = postfix_evaluator.evaluate_postfix(expression)
     print(f"{expression} = {expression_evaluated}")
+
+#Test Data for Infix to Postfix Conversion from Canvas:
+infix = ["A + B",
+         "A + B * C",
+         "( A + B ) * C",
+         "A * B + C / D",
+         "( A + B ) * ( C - D )",
+         "A + B * C - D / E",
+         "A * ( B + C ) / D",
+         "( A + B * C ) / ( D - E )",
+         "A + ( B - C ) * D",
+         "( A + B * ( C - D ) ) / E"]
+
+print("----- Infix to Postfix Converter -----")
+infix_converter = InfixConverter()
+for expression in infix:
+    expression_converted = infix_converter.convert_infix(expression)
+    print(f"{expression} = {expression_converted}")
