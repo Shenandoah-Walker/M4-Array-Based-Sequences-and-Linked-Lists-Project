@@ -96,3 +96,30 @@ class SinglyLinkedList:
 
     def __len__(self):
         return self.__count
+
+
+    #remove_all function created by me:
+    def remove_all(self, value):
+        #If the list is empty, raise an exception
+        if self.__head is None:
+            raise SinglyLinkedList.EmptyListException()
+        #Set current and previous pointers to traverse the list. The current pointer starts at the head of the list, and the previous pointer starts as None (because there is no previous node at the beginning of a list)
+        current = self.__head
+        previous = None
+        #Loop through the list. If the current node's data matches the value to be removed, remove the node. 
+        #If the current node is the head, update the head pointer. If the current node is the tail, update the tail pointer. 
+        #If the current node is an interior node, update the previous node's next pointer to skip the current node. 
+        #After removing a node, update the current pointer to continue checking for more occurrences of the value.
+        while current:
+            if current.data == value:
+                if previous is None:
+                    self.__head = current.next
+                else:
+                    previous.next = current.next
+                if current == self.__tail:
+                    self.__tail = previous
+                self.__count -= 1
+                current = current.next if previous is None else previous.next
+            else:
+                previous = current
+                current = current.next
