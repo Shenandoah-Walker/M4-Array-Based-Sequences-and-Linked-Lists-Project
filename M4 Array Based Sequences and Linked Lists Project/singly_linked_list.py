@@ -123,3 +123,26 @@ class SinglyLinkedList:
             else:
                 previous = current
                 current = current.next
+
+
+    #display_reverse_nr function created by me:
+    def display_reverse_nr(self):
+        #If the list is empty, raise an exception
+        if self.__head is None:
+            raise SinglyLinkedList.EmptyListException()
+        #Create an empty stack that will hold the elements of the list
+        stack = []
+        #Set current to the head of the list. previous is not needed for this function because the previous node is not required to display the list in reverse order.
+        current = self.__head
+
+        #Loop through the list and push each node's data onto the stack. After the loop, the stack will contain all the elements of the list in reverse order (because a stack has LIFO behavior).
+        while current:
+            stack.append(current.data)
+            current = current.next
+
+        #Join the elements in the stack into a string with " -> " as a separator and reverse the stack.
+        number_part_of_output  = " -> ".join(stack[::-1])
+
+        #Outer part of output to match sample output in Canvas
+        print(f"Reverse order (non-recursive): None <- {number_part_of_output} <- Head")
+        
