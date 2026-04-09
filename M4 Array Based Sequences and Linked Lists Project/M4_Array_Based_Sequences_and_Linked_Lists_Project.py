@@ -53,3 +53,21 @@ print("Removing 1 and all duplicates: Head ->", " -> ".join(str(x) for x in my_l
 #Remove all the occurrences of 6 in the list. (There should be 2)
 my_list3.remove_all(6)
 print("Removing 6 and all duplicates: Head ->", " -> ".join(str(x) for x in my_list3), "-> None")
+
+#Non-recursive reverse display test
+print()
+print("---- Non-recursive reverse display test ----")
+
+my_list4 = SinglyLinkedList()
+my_list4.build_forward_list([10, 20, 30, 40, 50])
+
+#Insertion order
+print("Insertion order: Head ->", " -> ".join(str(x) for x in my_list4), "-> None")
+
+#Reverse order (recursive)
+print("Reverse order (recursive): None <-", end= ' ')
+my_list4.display_reverse()
+print(" <- Head")
+
+#Reverse order (non-recursive)
+my_list4.display_reverse_nr()
