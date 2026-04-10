@@ -137,7 +137,7 @@ class SinglyLinkedList:
 
         #Loop through the list and push each node's data onto the stack. After the loop, the stack will contain all the elements of the list in reverse order (because a stack has LIFO behavior).
         while current:
-            stack.append(current.data)
+            stack.append(str(current.data))
             current = current.next
 
         #Join the elements in the stack into a string with " -> " as a separator and reverse the stack.
