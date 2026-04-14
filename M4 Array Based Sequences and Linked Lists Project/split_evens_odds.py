@@ -4,7 +4,7 @@ from singly_linked_list import Node
 class SplitEvensOdds(SinglyLinkedList):
     def split_even_odd(self):
         #Raise exception if list is empty
-        if self.SinglyLinkedList__head is None:
+        if self._SinglyLinkedList__head is None:
             raise SinglyLinkedList.EmptyListException()
 
         #Create even_list and odd_list as SinglyLinkedList objects
@@ -12,12 +12,12 @@ class SplitEvensOdds(SinglyLinkedList):
         odd_list = SinglyLinkedList()
 
         #Assign current cursor to list.head
-        current = self._SinglyLinkedList__.head
+        current = self._SinglyLinkedList__head
 
         #Clear original list
-        self._SinglyLinkedList__.head = None
-        self.SinglyLinkedList__.tail = None
-        self.SinglyLinkedList__.count = 0
+        self._SinglyLinkedList__head = None
+        self._SinglyLinkedList__tail = None
+        self._SinglyLinkedList__count = 0
 
         #while (more nodes)
         while current:
