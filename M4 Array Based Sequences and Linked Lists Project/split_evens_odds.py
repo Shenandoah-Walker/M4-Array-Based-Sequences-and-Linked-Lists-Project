@@ -1,7 +1,18 @@
 from singly_linked_list import SinglyLinkedList
 from singly_linked_list import Node
 
+#Class name: SplitEvensOdds
+#Class purpose: To split a singly linked list into two separate lists, one containing the even values and the other containing the odd values.
+
 class SplitEvensOdds(SinglyLinkedList):
+
+    #Method name: split_even_odd
+    #Purpose: To split the original list into two separate lists, one containing the even values and the other containing the odd values. The original list will be cleared after the split.
+    #Parameters: None
+    #Returns: A tuple containing the even list and the odd list as SinglyLinkedList objects.
+    #Preconditions: The original list must not be empty. If the list is empty, an exception will be raised.
+    #Postconditions: The original list will be cleared, and two new lists will be created containing the even and odd values, respectively.
+
     def split_even_odd(self):
         #Raise exception if list is empty
         if self._SinglyLinkedList__head is None:
